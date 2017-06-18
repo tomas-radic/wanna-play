@@ -1,0 +1,12 @@
+<% @availabilities.group_by(&:date).each do |date, date_availabilities| %>
+	<h2><%= date.to_s %></h2>
+	<% date_availabilities.each do |a| %>
+		<p>
+			<%= a.period %>
+			|
+			<%= link_to 'zmeniť', edit_availability_path(a), remote: true %>
+			|
+			<%= link_to 'zrušiť', availability_path(a), method: :delete, remote: true %>
+		</p>
+	<% end %>
+<% end %>

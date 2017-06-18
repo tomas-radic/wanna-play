@@ -1,0 +1,10 @@
+<div>
+	<%= link_to 'Domov', root_path %>
+	<%= link_to 'Môj plán', availabilities_path %>
+	<% if user_signed_in? %>
+		<%= link_to 'Odhlásenie', destroy_user_session_path, method: :delete %>
+	<% else %>
+		<%= link_to 'Prihlásenie', new_user_session_path %>
+		<%= link_to 'Registrácia', new_user_registration_path %>
+	<% end %>
+</div>
