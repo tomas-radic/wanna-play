@@ -1,9 +1,14 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
-<% @availabilities.group_by(&:date).each do |date, date_availabilities| %>
-	<h2><%= date.to_s %></h2>
-	<% date_availabilities.each do |a| %>
-		<p><%= "#{a.period} / #{a.user.name} (#{a.user.email}, #{a.user.phone_number || 't.č. neznáme'})" %></p>
+<% if @availabilities.any? %>
+	<% @availabilities.group_by(&:date).each do |date, date_availabilities| %>
+		<div class="jumbotron">
+			<h2><%= date.to_s %></h2>
+			<% date_availabilities.each do |a| %>
+				<% 17.times do %>
+					<p><%= "#{a.period} / #{a.user.name} (#{a.user.email}, #{a.user.phone_number || 't.č. neznáme'})" %></p>
+				<% end %>
+			<% end %>
+		</div>
 	<% end %>
+<% else %>
+	<h2>Zdá sa, že sa všetci boja!</h2>
 <% end %>
