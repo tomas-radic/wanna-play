@@ -1,6 +1,15 @@
-<%= link_to 'Pridať', new_availability_path, remote: true %>
-<div class="availabilities-list-div">
-	<%= render 'availabilities_list' %>
+<div class="row">
+	<div class="col-md-3">
+		<p>
+			<%= link_to t('.add'), new_availability_path, remote: true, class: 'btn btn-default btn-lg' %>
+		</p>
+	</div>
+	<div class="col-md-6">
+		<div class="availabilities-list-div">
+			<%= render 'availabilities_list' %>
+		</div>
+	</div>
+	<div class="col-md-3"></div>
 </div>
 <div class="availability-modal-div">
 	<%= render 'availability_modal' %>

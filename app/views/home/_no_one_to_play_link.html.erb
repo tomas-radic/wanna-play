@@ -1,0 +1,6 @@
+<%= t('.no_one_to_play') %>
+<% if user_signed_in? %>
+	<%= link_to t('.no_one_to_play_link_text'), new_availability_path, remote: true, class: 'outlined' %>
+<% else %>
+	<%= link_to t('.no_one_to_play_link_text'), new_user_session_path, class: 'outlined' %>
+<% end %>

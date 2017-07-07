@@ -11,10 +11,12 @@ class AvailabilitiesController < ApplicationController
 
   def create
     @availability = current_user.availabilities.build(availability_params)
-
+# binding.pry
     if @availability.save
+# binding.pry
       flash[:notice] = 'success (temp)'
     else
+# binding.pry
       flash[:alert] = 'error (temp)'
     end
 

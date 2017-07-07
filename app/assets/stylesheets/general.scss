@@ -1,0 +1,130 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  height: 100%;
+} 
+
+body {
+  background-color: #333;
+  background-image: url('net-background.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+}
+
+.navbar-default {
+	color: white;
+	background-color: #333333;
+	border-color: #98ba33;
+
+	.navbar-brand {
+		color: #333333;
+		background-color: #98ba33;
+
+		&:hover {
+			color: white;
+			background-color: #98ba33;
+		}
+	}
+
+	.navbar-nav {
+		li > a {
+			color: white;
+
+			&:hover {
+				color: #98ba33;
+			}
+		}
+
+		.active > a {
+			color: #333333;
+			background-color: #98ba33;
+
+			&:hover {
+				color: white;
+				background-color: #98ba33;
+			}
+		}
+	}
+}
+
+.content {
+	padding-top: 80px;
+}
+
+/*.central-area {
+	height: 100%;
+	border-right: 1px solid;
+	border-left: 1px solid;
+}*/
+
+.panel {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-color: #98ba33;
+	color: white;
+	border-radius: 0;
+
+	.panel-heading {
+		background-color: #98ba33;
+		border-color: #98ba33;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+	.panel-body {
+		padding: 18px;
+	}
+
+	.vert-spaced {
+		padding: 42px 18px;
+	}
+}
+
+.btn-default {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	border-color: #98ba33;
+
+	&:hover {
+		background-color: #98ba33;
+		color: white;
+		border-color: white;
+	}
+}
+
+a {
+	color: inherit;
+
+	&:hover {
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+.outlined {
+	border: 1px solid;
+	padding: 12px;
+}
+
+.center-element {
+	margin: 0 auto;
+	display: block;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.justified {
+	text-align: justify;
+}
+
+.sticker {
+	padding: 18px;
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #333333;
+	margin-bottom: 18px;
+}

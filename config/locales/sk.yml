@@ -1,0 +1,56 @@
+sk:
+  models:
+    availability:
+      periods:
+        about_noon: okolo obeda
+        afternoon: poobede
+        all_day: celý deň
+        early_morning: ráno
+        evening: večer
+        morning: doobeda
+  availabilities:
+    availabilities_list:
+      no_scheduled_playing1: Nemáš tu žiadny hrací plán
+      no_scheduled_playing2: a zavolaj ostatných hrať!
+      no_scheduled_playing_link_text: vytvor si ho
+    index:
+      add: Pridať
+  dates:
+    days:
+      friday: piatok
+      monday: pondelok
+      saturday: sobota
+      sunday: nedeľa
+      thursday: štvrtok
+      tuesday: utorok
+      wednesday: streda
+    months:
+      april: apríl
+      august: august
+      december: december
+      february: február
+      january: január
+      july: júl
+      jun: jún
+      march: marec      
+      may: máj
+      november: november
+      october: október
+      september: september
+  home:
+    index:
+      how_this_helps: Ako mi toto pomôže?
+      how_this_helps_text: Na tejto stránke nájdeš zoznam možných súperov, ktorí zverejnili že majú záujem si v najbližšej dobe zahrať. Takže nemusíš volať rôznym ľuďom, stačí si vybrať z tých, ktorých tu vidíš! Aj ty môžeš zverejniť svoj záujem hrať. Ostatní to uvidia tu a zavolajú ti sami!
+      why_is_page_slow: Prečo stránka nabieha pomaly?
+      why_is_page_slow_text: Keďže prevádzka tejto stránky nemá cieľ zarobiť peniaze, je snaha udržovať jej prevádzku na minimálnych nákladoch. Preto keď sa niekoľko hodín nepoužíva, je hostovacím serverom uvedená do mikrospánku, ale vždy ju môžeš prebudiť, poteší sa :-)
+    no_one_to_play_link:
+      no_one_to_play: Najbližšie dni nikto hrať nechce, buď odvážny a
+      no_one_to_play_link_text: povedz kedy chceš ty hrať!
+  layouts:
+    main_menu:
+      home: Domov
+      login: Prihlásenie
+      logout: Odhlásenie
+      my_plan: Môj plán
+      profile: Profil
+      registration: Registrácia

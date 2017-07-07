@@ -1,14 +1,48 @@
-<% if @availabilities.any? %>
-	<% @availabilities.group_by(&:date).each do |date, date_availabilities| %>
-		<div class="jumbotron">
-			<h2><%= date.to_s %></h2>
-			<% date_availabilities.each do |a| %>
-				<% 17.times do %>
-					<p><%= "#{a.period} / #{a.user.name} (#{a.user.email}, #{a.user.phone_number || 't.č. neznáme'})" %></p>
-				<% end %>
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+		<% if @availabilities.any? %>
+			<% @availabilities.group_by(&:date).each do |date, date_availabilities| %>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2 class="panel-title"><%= formatted_date(date) %></h2>
+					</div>
+					<div class="panel-body">
+						<table class="table">
+							<% date_availabilities.group_by(&:period).each do |period, period_availabilities| %>
+								<tr>
+									<td>
+										<%= t("models.availability.periods.#{period}") %>
+									</td>
+									<td>●</td>
+									<td><%= user_info_for(period_availabilities) %></td>
+								</tr>
+							<% end %>
+						</table>
+					</div>
+				</div>
 			<% end %>
+		<% else %>
+			<div class="panel panel-default">
+				<div class="panel-body vert-spaced">
+					<%= render 'no_one_to_play_link' %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<div class="col-md-3">
+		<div class="sticker">
+			<h3 class="center-text"><%= t('.how_this_helps') %></h3>
+			<p class="justified"><i><%= t('.how_this_helps_text') %></i></p>
 		</div>
-	<% end %>
-<% else %>
-	<h2>Zdá sa, že sa všetci boja!</h2>
+		<div class="sticker">
+			<h3 class="center-text"><%= t('.why_is_page_slow') %></h3>
+			<p class="justified"><i><%= t('.why_is_page_slow_text') %></i></p>
+		</div>
+	</div>
+</div>
+<% if user_signed_in? %>
+	<div class="availability-modal-div">
+		<%= render 'availabilities/availability_modal' %>
+	</div>
 <% end %>
