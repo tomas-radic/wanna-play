@@ -1,6 +1,7 @@
-<%= t('.no_one_to_play') %>
+<%= t('.no_one_to_play1') %>
 <% if user_signed_in? %>
-	<%= link_to t('.no_one_to_play_link_text'), new_availability_path, remote: true, class: 'outlined' %>
+	<b><%= link_to t('.no_one_to_play_link_text'), new_availability_path, remote: true, class: 'underlined' %></b>
 <% else %>
-	<%= link_to t('.no_one_to_play_link_text'), new_user_session_path, class: 'outlined' %>
+	<b><%= link_to t('.no_one_to_play_link_text'), new_user_session_path, class: 'underlined' %></b>
 <% end %>
+<%= t('.no_one_to_play2') %>

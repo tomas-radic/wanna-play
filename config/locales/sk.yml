@@ -2,8 +2,8 @@ sk:
   availabilities:
     availabilities_list:
       no_scheduled_playing1: Nemáš tu žiadny hrací plán
-      no_scheduled_playing2: a zavolaj ostatných hrať!
-      no_scheduled_playing_link_text: vytvor si ho
+      no_scheduled_playing2: si ho a zavolaj ostatných hrať!
+      no_scheduled_playing_link_text: vytvor
     index:
       add: Pridať
   dates:
@@ -62,8 +62,9 @@ sk:
       why_is_page_slow: Prečo stránka nabieha pomaly?
       why_is_page_slow_text: Keďže prevádzka tejto stránky nemá cieľ zarobiť peniaze, je snaha udržovať jej prevádzku na minimálnych nákladoch. Preto keď sa niekoľko hodín nepoužíva, je hostovacím serverom uvedená do mikrospánku, ale vždy ju môžeš prebudiť, poteší sa :-)
     no_one_to_play_link:
-      no_one_to_play: Najbližšie dni nikto hrať nechce, buď odvážny a
-      no_one_to_play_link_text: povedz kedy chceš ty hrať!
+      no_one_to_play1: Najbližšie dni nikto hrať nechce, buď odvážny a
+      no_one_to_play_link_text: povedz ostatným
+      no_one_to_play2: kedy chceš ty hrať!
   layouts:
     main_menu:
       home: Domov
