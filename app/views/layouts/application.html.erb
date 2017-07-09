@@ -13,8 +13,10 @@
       <%= content_tag :div, msg, class: name %>
     <% end -%>
     <%= render 'layouts/main_menu' %>
-    <div class="container-fluid content">
-      <%= yield %>
+    <div class="container-fluid">
+      <div class="content">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

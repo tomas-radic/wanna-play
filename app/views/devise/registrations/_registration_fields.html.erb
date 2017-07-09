@@ -1,0 +1,14 @@
+<div class="form-group">
+  <%= form_object.label :email, t('models.user.email') %>
+  <%= form_object.email_field :email, autofocus: true, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= form_object.label :name, t('models.user.name') %>
+  <%= form_object.text_field :name, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <%= form_object.label :phone_number, t('models.user.phone_number') %>
+  <%= form_object.text_field :phone_number, class: 'form-control' %>
+</div>

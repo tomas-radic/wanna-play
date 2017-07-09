@@ -11,7 +11,7 @@ puts "\nCreating users..."
 	email.gsub!('@', "#{i + 1}@")
 	user = User.new(
 		email: email, 
-		name: Faker::Name.name,
+		name: "#{Faker::Name.first_name} #{Faker::Name.last_name}",
 		phone_number: Faker::PhoneNumber.cell_phone,
 		password: 'iDontTellYou:-)', 
 		password_confirmation: 'iDontTellYou:-)'

@@ -1,13 +1,4 @@
 sk:
-  models:
-    availability:
-      periods:
-        about_noon: okolo obeda
-        afternoon: poobede
-        all_day: celý deň
-        early_morning: ráno
-        evening: večer
-        morning: doobeda
   availabilities:
     availabilities_list:
       no_scheduled_playing1: Nemáš tu žiadny hrací plán
@@ -37,6 +28,33 @@ sk:
       november: november
       october: október
       september: september
+  devise:
+    passwords:
+      new:
+        email: Email
+        forgotten_password: Zabudnuté heslo
+    registrations:
+      edit:
+        cancel_account: Zrušiť účet
+        change_password: Zmeniť heslo
+        profile: Profil
+        sure_to_cancel_account: Naozaj chceš tento účet zrušiť? Potvrdením tejto otázky sa to naozaj stane!
+      new:
+        chars_count_min: znakov aspoň
+        password: Heslo
+        password_confirmation: Potvrdenie hesla
+        sign_up: Registrácia
+    sessions:
+      new:
+        email: Email
+        log_in: Prihlásenie
+        password: Heslo
+        remember_me: Zapamätať si ma
+    shared:
+      links:
+        forgotten_password: Zabudnuté heslo?
+        log_in: Prihlásenie
+        sign_up: Registrácia
   home:
     index:
       how_this_helps: Ako mi toto pomôže?
@@ -52,5 +70,25 @@ sk:
       login: Prihlásenie
       logout: Odhlásenie
       my_plan: Môj plán
-      profile: Profil
       registration: Registrácia
+  models:
+    availability:
+      periods:
+        about_noon: okolo obeda
+        afternoon: poobede
+        all_day: celý deň
+        early_morning: ráno
+        evening: večer
+        morning: doobeda
+    user:
+      email: Email
+      name: Meno
+      phone_number: Tel. č.
+  submit_btn_text: Potvrdiť
+  users:
+    password_change:
+      chars_count_min: znakov aspoň
+      current_password: Súčasné heslo
+      new_password: Nové heslo
+      new_password_confirmation: Potvrdenie nového hesla
+      password_change: Zmena hesla
