@@ -7,9 +7,9 @@ I created this simple tiny app for our small tennis competition community. I nam
 I will deploy this application to Heroku. Or maybe you prefer another service for Rails apps to run? Give me your tip!
 
 # Setup project locally
-Go to your projects folder (ex. cd my-projects)
-git clone https://github.com/tomas-radic/wanna-play.git
-cd wanna-play
-rake db:setup
-rails s
-http://localhost:3000
+- Go to your projects folder (ex. cd my-projects)
+- git clone https://github.com/tomas-radic/wanna-play.git
+- cd wanna-play
+- rake db:setup
+- rails s
+- http://localhost:3000
