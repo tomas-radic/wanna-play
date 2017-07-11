@@ -28,6 +28,8 @@ sk:
       november: november
       october: október
       september: september
+    today: dnes
+    tomorrow: zajtra
   devise:
     passwords:
       new:

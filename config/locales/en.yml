@@ -1,23 +1,97 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  availabilities:
+    availabilities_list:
+      no_scheduled_playing1: No plan to play here!
+      no_scheduled_playing2: and get the others to play with you!
+      no_scheduled_playing_link_text: Create some
+    index:
+      add: Add
+  dates:
+    days:
+      friday: friday
+      monday: monday
+      saturday: saturday
+      sunday: sunday
+      thursday: thursday
+      tuesday: tuesday
+      wednesday: wednesday
+    months:
+      april: april
+      august: august
+      december: december
+      february: february
+      january: january
+      july: july
+      jun: jun
+      march: march      
+      may: may
+      november: november
+      october: october
+      september: september
+    today: today
+    tomorrow: tomorrow
+  devise:
+    passwords:
+      new:
+        email: Email
+        forgotten_password: Forgotten password
+    registrations:
+      edit:
+        cancel_account: Cancel account
+        change_password: Change password
+        profile: Profile
+        sure_to_cancel_account: Really wish to cancel account? Confirming this message will cause your account to disappear.
+      new:
+        chars_count_min: characters minimum
+        password: Password
+        password_confirmation: Password confirmation
+        sign_up: Registration
+    sessions:
+      new:
+        email: Email
+        log_in: Log In
+        password: Password
+        remember_me: Remember me
+    shared:
+      links:
+        forgotten_password: Forgotten password?
+        log_in: Log In
+        sign_up: Registration
+  home:
+    index:
+      how_this_helps: How can this help me?
+      how_this_helps_text: This page will show you list of potential sparring partners or opponents, those who published their interest to play in upcoming days. No need to call those having another plans, just pick one here! And you can also publish your interest to play too. They will see you here and call you by them selves!
+      why_is_page_slow: Why is the first page load slow?
+      why_is_page_slow_text: This page does not earn any money in any way. So it is needed to keep the costs as low as possible and the hosting service makes it sleep after some time when not used. But you can wake it up anytime, it will be happy :-)
+    no_one_to_play_link:
+      no_one_to_play1: There is nobody to play with in upcoming days. Come on, be brave and
+      no_one_to_play_link_text: tell the others
+      no_one_to_play2: what time do you want to play!
+  layouts:
+    main_menu:
+      home: Home
+      login: Log In
+      logout: Log Out
+      my_plan: My Plan
+      registration: Registration
+  models:
+    availability:
+      periods:
+        about_noon: about noon
+        afternoon: afternoon
+        all_day: all day
+        early_morning: early morning
+        evening: evening
+        morning: morning
+    user:
+      email: Email
+      name: Name
+      phone_number: Phone nr.
+  submit_btn_text: Submit
+  users:
+    password_change:
+      chars_count_min: characters minimum
+      current_password: Current password
+      new_password: New password
+      new_password_confirmation: Confirm new password
+      password_change: Password change

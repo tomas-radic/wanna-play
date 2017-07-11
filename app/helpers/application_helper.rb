@@ -4,11 +4,10 @@ module ApplicationHelper
 
 		case date
 		when Date.today
-			result += 'dnes'
+			result += t('dates.today')
 		when Date.tomorrow
-			result += 'zajtra'
+			result += t('dates.tomorrow')
 		else
-			
 			result += t("dates.days.#{date.strftime('%A').downcase}")
 			result += date.strftime(', %-d ')
 			result += t("dates.months.#{date.strftime('%B').downcase}")
