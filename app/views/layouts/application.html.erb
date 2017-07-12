@@ -10,12 +10,10 @@
   </head>
 
   <body>
-  	<% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-    <% end -%>
     <%= render 'layouts/main_menu' %>
     <div class="container-fluid">
       <div class="content">
+        <%= render partial: "shared/flash_messages", flash: flash %> 
         <%= yield %>
       </div>
     </div>

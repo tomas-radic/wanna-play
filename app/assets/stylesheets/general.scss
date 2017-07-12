@@ -51,15 +51,25 @@ body {
 	}
 }
 
+.alert {
+	color: #333333;
+	border-radius: 0;
+}
+
+.alert-success {
+	background-color: #98ba33;
+	border-color: #f7776a;
+
+}
+
+.alert-error {
+	background-color: #f7776a;
+	border-color: #98ba33;
+}
+
 .content {
 	padding-top: 80px;
 }
-
-/*.central-area {
-	height: 100%;
-	border-right: 1px solid;
-	border-left: 1px solid;
-}*/
 
 .panel {
 	background-color: rgba(0, 0, 0, 0.5);
