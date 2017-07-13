@@ -73,7 +73,9 @@ en:
       login: Log In
       logout: Log Out
       my_plan: My Plan
+      profile: Profile
       registration: Registration
+      slovak: Slovensky
   models:
     availability:
       periods:

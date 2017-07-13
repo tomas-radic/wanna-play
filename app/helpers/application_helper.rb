@@ -15,4 +15,20 @@ module ApplicationHelper
 		
 		result
 	end
+
+	def switch_locale_link
+		redirect_path = root_path
+		caption = 'Default language'
+		
+		case I18n.locale
+		when :en
+			redirect_path = root_path locale: :sk
+			caption = t('.slovak')
+		when :sk
+			redirect_path = root_path locale: :en
+			caption = t('.english')
+		end
+
+		link_to caption, redirect_path
+	end
 end

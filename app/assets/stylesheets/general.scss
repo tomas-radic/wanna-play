@@ -39,7 +39,12 @@ body {
 			}
 		}
 
-		.active > a {
+		li.dropdown.open > a {
+			color: #333333;
+			background-color: #98ba33;
+		}
+
+		li.active > a {
 			color: #333333;
 			background-color: #98ba33;
 
@@ -48,8 +53,23 @@ body {
 				background-color: #98ba33;
 			}
 		}
+
+		.dropdown-menu {
+			background-color: #333333;
+
+			li > a:hover {
+				color: #98ba33;
+				background-color: inherit;
+			}
+		}
+	}
+	
+	.navbar-nav > li > a:focus {
+	  color: white;
+	  background-color: #333333;
 	}
 }
+
 
 .alert {
 	color: #333333;

@@ -4,6 +4,6 @@ module HomeHelper
 			user_info = "#{a.user.name}"
 			user_info += " (#{a.user.phone_number})" unless a.user.phone_number.blank?
 			user_info
-		end.join(', ')
+		end.sort.join("<br/>").html_safe
 	end
 end

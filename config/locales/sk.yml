@@ -69,10 +69,12 @@ sk:
       no_one_to_play2: kedy chceš ty hrať!
   layouts:
     main_menu:
+      english: English
       home: Domov
       login: Prihlásenie
       logout: Odhlásenie
       my_plan: Môj plán
+      profile: Profil
       registration: Registrácia
   models:
     availability:
