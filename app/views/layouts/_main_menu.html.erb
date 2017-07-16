@@ -20,8 +20,6 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-
-          
           <li class="<%= current_page?(edit_user_registration_path) ? 'dropdown active' : 'dropdown' %>">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <%= current_user.name %>
@@ -34,8 +32,6 @@
               <li><%= link_to t('.logout'), destroy_user_session_path, method: :delete %></li>
             </ul>
           </li>
-
-
 				<% else %>
           <li><%= switch_locale_link %></li>
 					<li><%= link_to t('.login'), new_user_session_path %></li>

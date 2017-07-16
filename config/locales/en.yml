@@ -89,6 +89,9 @@ en:
       email: Email
       name: Name
       phone_number: Phone nr.
+  shared:
+    footer:
+      author: Author
   submit_btn_text: Submit
   users:
     password_change:

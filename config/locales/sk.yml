@@ -89,6 +89,9 @@ sk:
       email: Email
       name: Meno
       phone_number: Tel. č.
+  shared:
+    footer:
+      author: Autor
   submit_btn_text: Potvrdiť
   users:
     password_change:
