@@ -92,6 +92,8 @@ en:
         password: Password
         password_confirmation: Password confirmation
         sign_up: Registration
+      registration_fields:
+        name_suggestion_note: Please, type your name identically as you have it on www.kurty-topolcany.sk page.
       user:
         destroyed: ''
         signed_up: ''

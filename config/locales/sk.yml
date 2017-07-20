@@ -92,6 +92,8 @@ sk:
         password: Heslo
         password_confirmation: Potvrdenie hesla
         sign_up: Registrácia
+      registration_fields:
+        name_suggestion_note: Prosím, použi tu rovnako napísané meno ako máš na stránke www.kurty-topolcany.sk.
       user:
         destroyed: ''
         signed_up: ''
