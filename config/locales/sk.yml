@@ -93,7 +93,8 @@ sk:
         password_confirmation: Potvrdenie hesla
         sign_up: Registrácia
       registration_fields:
-        name_suggestion_note: Prosím, použi tu rovnako napísané meno ako máš na stránke www.kurty-topolcany.sk.
+        name_suggestion_note_html: Prosím, použi tu rovnako napísané meno ako máš na stránke<br/><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a>.
+        phone_number_suggestion_note: Číslo sa lepšie číta ak sú v ňom medzery.
       user:
         destroyed: ''
         signed_up: ''

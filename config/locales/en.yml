@@ -93,7 +93,8 @@ en:
         password_confirmation: Password confirmation
         sign_up: Registration
       registration_fields:
-        name_suggestion_note: Please, type your name identically as you have it on www.kurty-topolcany.sk page.
+        name_suggestion_note_html: Please, type your name identically as you have it<br/>on <a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a> page.
+        phone_number_suggestion_note: If you use spaces it's easier to read the number.
       user:
         destroyed: ''
         signed_up: ''
