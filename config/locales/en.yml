@@ -1,11 +1,50 @@
 en:
+  activerecord:
+    attributes:
+      availability:
+        periods:
+          about_noon: about noon
+          afternoon: afternoon
+          all_day: all day
+          early_morning: early morning
+          evening: evening
+          morning: morning
+      user:
+        email: Email
+        name: Name
+        password: Password
+        password_confirmation: Password confirmation
+        phone_number: Phone number
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: 'is required'
+              invalid: 'is not correct'
+              taken: 'is already in use here'
+            name: 
+              blank: 'is required'
+            password:
+              blank: 'is required'
+              too_short: 'is too short'
+            password_confirmation:
+              confirmation: 'does not match'
   availabilities:
     availabilities_list:
       no_scheduled_playing1: No plan to play here!
       no_scheduled_playing2: and get the others to play with you!
       no_scheduled_playing_link_text: Create some
+    create:
+      error: Record was NOT created.
+      record_already_exists: Such record already exists.
+      success: If you schedule a match for this day with someone, please be so kind, get back here and cancel this record so that you don't confuse other players. Thank you!
     index:
       add: Add
+    update:
+      error: Record was NOT updated.
+      record_already_exists: Such record already exists.
+      success: If you schedule a match for this day with someone, please be so kind, get back here and cancel this record so that you don't confuse other players. Thank you!
   dates:
     days:
       friday: friday
@@ -31,10 +70,17 @@ en:
     today: today
     tomorrow: tomorrow
   devise:
+    failure:
+      user:
+        invalid: This email/password combination is not correct.
+        not_found_in_database: This email/password combination is not correct.
+        unauthenticated: ''
     passwords:
       new:
         email: Email
         forgotten_password: Forgotten password
+      user:
+        send_instructions: Go to the inbox of the email address you entered and use the link to set up a new password.
     registrations:
       edit:
         cancel_account: Cancel account
@@ -46,12 +92,18 @@ en:
         password: Password
         password_confirmation: Password confirmation
         sign_up: Registration
+      user:
+        destroyed: ''
+        signed_up: ''
     sessions:
       new:
         email: Email
         log_in: Log In
         password: Password
         remember_me: Remember me
+      user:
+        signed_in: ''
+        signed_out: ''
     shared:
       links:
         forgotten_password: Forgotten password?
@@ -76,19 +128,6 @@ en:
       profile: Profile
       registration: Registration
       slovak: Slovensky
-  models:
-    availability:
-      periods:
-        about_noon: about noon
-        afternoon: afternoon
-        all_day: all day
-        early_morning: early morning
-        evening: evening
-        morning: morning
-    user:
-      email: Email
-      name: Name
-      phone_number: Phone nr.
   shared:
     footer:
       author: Author

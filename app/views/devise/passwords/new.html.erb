@@ -5,7 +5,13 @@
       <div class="panel-body">
 				<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 					<h2 class="center-text"><%= t('.forgotten_password') %></h2>
-				  <%= devise_error_messages! %>
+				  <% if @user.errors.any? %>
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          <% end %>
 
 				  <div class="form-group">
 				    <%= f.label :email, t('.email') %>

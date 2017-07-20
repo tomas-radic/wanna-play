@@ -12,7 +12,7 @@
 							<% date_availabilities.group_by(&:period).each do |period, period_availabilities| %>
 								<tr>
 									<td>
-										<%= t("models.availability.periods.#{period}") %>
+										<%= t("activerecord.attributes.availability.periods.#{period}") %>
 									</td>
 									<td>●</td>
 									<td><%= user_info_for(period_availabilities) %></td>

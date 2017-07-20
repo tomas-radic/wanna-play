@@ -1,11 +1,50 @@
 sk:
+  activerecord:
+    attributes:
+      availability:
+        periods:
+          about_noon: okolo obeda
+          afternoon: poobede
+          all_day: celý deň
+          early_morning: ráno
+          evening: večer
+          morning: doobeda
+      user:
+        email: Email
+        name: Meno
+        password: Heslo
+        password_confirmation: Potvrdenie hesla
+        phone_number: Tel. č.
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: je potrebné uviesť
+              invalid: nie je správny
+              taken: sa tu už používa
+            name: 
+              blank: je potrebné uviesť
+            password:
+              blank: je potrebné uviesť
+              too_short: je príliš krátke
+            password_confirmation:
+              confirmation: sa nezhoduje
   availabilities:
     availabilities_list:
       no_scheduled_playing1: Nemáš tu žiadny hrací plán
       no_scheduled_playing2: si ho a zavolaj ostatných hrať!
       no_scheduled_playing_link_text: vytvor
+    create:
+      error: Záznam sa nepodarilo vytvoriť.
+      record_already_exists: Takýto záznam už existuje.
+      success: Prosím, ak si na tento deň neskôr dohodneš zápas, vráť sa sem a vymaž tento záznam, aby s tebou ostatní už nepočítali. Vďaka!
     index:
       add: Pridať
+    update:
+      error: Záznam sa nepodarilo upraviť.
+      record_already_exists: Takýto záznam už existuje.
+      success: Prosím, ak si na tento deň neskôr dohodneš zápas, vráť sa sem a vymaž tento záznam, aby s tebou ostatní už nepočítali. Vďaka!
   dates:
     days:
       friday: piatok
@@ -31,10 +70,17 @@ sk:
     today: dnes
     tomorrow: zajtra
   devise:
+    failure:
+      user:
+        invalid: Kombinácia emailu a hesla nie je správna.
+        not_found_in_database: Kombinácia emailu a hesla nie je správna.
+        unauthenticated: ''
     passwords:
       new:
         email: Email
         forgotten_password: Zabudnuté heslo
+      user:
+        send_instructions: Navštív schránku uvedenej emailovej adresy a použi link, ktorý ti pomôže znovu nastaviť heslo.
     registrations:
       edit:
         cancel_account: Zrušiť účet
@@ -46,12 +92,18 @@ sk:
         password: Heslo
         password_confirmation: Potvrdenie hesla
         sign_up: Registrácia
+      user:
+        destroyed: ''
+        signed_up: ''
     sessions:
       new:
         email: Email
         log_in: Prihlásenie
         password: Heslo
         remember_me: Zapamätať si ma
+      user:
+        signed_in: ''
+        signed_out: ''
     shared:
       links:
         forgotten_password: Zabudnuté heslo?
@@ -76,19 +128,6 @@ sk:
       my_plan: Môj plán
       profile: Profil
       registration: Registrácia
-  models:
-    availability:
-      periods:
-        about_noon: okolo obeda
-        afternoon: poobede
-        all_day: celý deň
-        early_morning: ráno
-        evening: večer
-        morning: doobeda
-    user:
-      email: Email
-      name: Meno
-      phone_number: Tel. č.
   shared:
     footer:
       author: Autor

@@ -12,9 +12,9 @@ class AvailabilitiesController < ApplicationController
   def create
     @availability = current_user.availabilities.build(availability_params)
     if @availability.save
-      flash[:success] = 'success (temp)'
+      flash[:success] = t('.success')
     else
-      flash[:error] = 'error (temp)'
+      set_error_message
     end
 
     redirect_to availabilities_path
@@ -28,9 +28,9 @@ class AvailabilitiesController < ApplicationController
     @availability = current_user.availabilities.find(params[:id])
 
     if @availability.update(availability_params)
-      flash[:notice] = 'success (temp)'
+      flash[:success] = t('.success')
     else
-      flash[:alert] = 'error (temp)'
+      set_error_message
     end
 
     redirect_to availabilities_path
@@ -46,5 +46,16 @@ class AvailabilitiesController < ApplicationController
 
   def availability_params
     params.require(:availability).permit(:date, :period)
+  end
+
+  def set_error_message
+    flash[:error] = t('.error')
+    already_exists_error = @availability.errors.details[:user_id].to_a
+    
+    if already_exists_error.any?
+      if already_exists_error.first[:error].eql?(:taken)
+        flash[:error] = t('.record_already_exists')
+      end
+    end
   end
 end

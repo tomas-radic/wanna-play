@@ -15,7 +15,7 @@
 					  <div class="form-group">
 					  	<%= f.label :period, 'Čas' %>
 					  	<%= f.select :period, 
-					  		options_for_select(Availability.periods.map { |key, value| [t("models.availability.periods.#{key}"), key] }, 
+					  		options_for_select(Availability.periods.map { |key, value| [t("activerecord.attributes.availability.periods.#{key}"), key] }, 
 					  		@availability.period), {}, class: 'form-control' 
 					  	%>
 					  </div>
