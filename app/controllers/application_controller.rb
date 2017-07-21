@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   	{ locale: I18n.locale }
 	end
 
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || availabilities_path
+  end
+
   
   protected
 
