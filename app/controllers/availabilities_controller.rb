@@ -2,7 +2,7 @@ class AvailabilitiesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @availabilities = current_user.availabilities
+    @availabilities = current_user.availabilities.current
   end
 
   def new
@@ -21,11 +21,11 @@ class AvailabilitiesController < ApplicationController
   end
 
   def edit
-    @availability = current_user.availabilities.find(params[:id])
+    @availability = current_user.availabilities.current.find(params[:id])
   end
 
   def update
-    @availability = current_user.availabilities.find(params[:id])
+    @availability = current_user.availabilities.current.find(params[:id])
 
     if @availability.update(availability_params)
       flash[:success] = t('.success')
@@ -37,8 +37,8 @@ class AvailabilitiesController < ApplicationController
   end
 
   def destroy
-    current_user.availabilities.find(params[:id]).destroy
-    @availabilities = current_user.availabilities
+    current_user.availabilities.current.find(params[:id]).destroy
+    @availabilities = current_user.availabilities.current
   end
 
 

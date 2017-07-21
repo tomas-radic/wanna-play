@@ -1,6 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
+
+raise "Environment does not support seeds!" if Rails.env.eql?('production')
+
 User.destroy_all
 
 # Create 10 users

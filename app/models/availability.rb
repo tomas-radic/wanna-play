@@ -10,6 +10,6 @@ class Availability < ApplicationRecord
 	enum period: [:all_day, :early_morning, :morning, :about_noon, :afternoon, :evening]
 
 	# Scopes
-	default_scope { where(occupied: false).where('date >= ?', Date.today).order(:date, :period) }
+	scope :current, -> { where(occupied: false).where('date >= ?', Date.today).order(:date, :period) }
 
 end

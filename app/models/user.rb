@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  after_create 	:notify_create, 	if: Proc.new { Rails.env.eql?(:production) }
-  after_destroy	:notify_destroy,	if: Proc.new { Rails.env.eql?(:production) }
+  # after_create 	:notify_create, 	if: Proc.new { Rails.env.eql?('development') }
+  # after_destroy	:notify_destroy,	if: Proc.new { Rails.env.eql?('development') }
 
 	# Validations
 	validates :name, :email, presence: true

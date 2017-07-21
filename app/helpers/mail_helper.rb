@@ -5,7 +5,7 @@ module MailHelper
 	ADMIN_EMAIL = 'tomas.radic@gmail.com'
 	DEFAULT_FROM = 'info@wanna-play.com'
 
-	def send_mail(sender, recipient, subject, body)
+	def self.send_mail(sender, recipient, subject, body)
 		from = Email.new(email: sender)
 		to = Email.new(email: recipient)
 
@@ -19,9 +19,9 @@ module MailHelper
 		puts response.headers
 	end
 
-	def user_created(user)
+	def self.user_created(user)
 		content = "<!DOCTYPE html><html><head><meta content='text/html; charset=UTF-8' http-equiv='Content-Type' /></head>"\
-			"<body><h1>Created user #{user.name}</h1><p>email: #{@user.email}<br/>phone number: #{@user.phone_number}"\
+			"<body><h1>Created user #{user.name}</h1><p>email: #{user.email}<br/>phone number: #{user.phone_number}"\
 			"</p></body></html>"
 		send_mail(DEFAULT_FROM, ADMIN_EMAIL, "wanna-play: created user #{user.name}", content)
 	end
