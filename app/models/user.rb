@@ -18,10 +18,11 @@ class User < ApplicationRecord
 	private
 
 	def notify_create
-		UserMailer.user_created(self).deliver_now
+		MailHelper.user_created(self)
+		# UserMailer.user_created(self).deliver_now
 	end
 
 	def notify_destroy
-		UserMailer.user_destroyed(self).deliver_now
+		# UserMailer.user_destroyed(self).deliver_now
 	end
 end
