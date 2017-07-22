@@ -100,6 +100,7 @@ en:
       user:
         destroyed: ''
         signed_up: ''
+        updated: ''
     sessions:
       new:
         email: Email

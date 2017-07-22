@@ -13,4 +13,12 @@ class Availability < ApplicationRecord
 	# Scopes
 	scope :current, -> { where(occupied: false).where('date >= ?', Date.today).order(:date, :period) }
 
+	before_validation :strip_whitespaces
+
+
+	private
+
+	def strip_whitespaces
+		self.note.strip!
+	end
 end

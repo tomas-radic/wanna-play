@@ -14,8 +14,17 @@ class User < ApplicationRecord
 	# Relations
 	has_many :availabilities, dependent: :destroy
 
+	# Callbacks
+	before_validation :strip_whitespaces
+
 
 	private
+
+	def strip_whitespaces
+		self.email.strip!
+		self.name.strip!
+		self.phone_number.strip!
+	end
 
 	def notify_create
 		MailHelper.user_created(self)
