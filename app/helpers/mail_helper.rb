@@ -25,4 +25,11 @@ module MailHelper
 			"</p></body></html>"
 		send_mail(DEFAULT_FROM, ADMIN_EMAIL, "wanna-play: created user #{user.name}", content)
 	end
+
+	def self.user_destroyed(user)
+		content = "<!DOCTYPE html><html><head><meta content='text/html; charset=UTF-8' http-equiv='Content-Type' /></head>"\
+			"<body><h1>Destroyed user #{user.name}</h1><p>email: #{user.email}<br/>phone number: #{user.phone_number}"\
+			"</p></body></html>"
+		send_mail(DEFAULT_FROM, ADMIN_EMAIL, "wanna-play: destroyed user #{user.name}", content)
+	end
 end

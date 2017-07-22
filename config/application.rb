@@ -14,5 +14,6 @@ module WannaPlay
 
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
 		config.i18n.default_locale = :sk
+		config.max_availability_note_length = 60
   end
 end

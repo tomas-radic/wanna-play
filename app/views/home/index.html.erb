@@ -1,5 +1,11 @@
 <div class="row">
-	<div class="col-md-3"></div>
+	<div class="col-md-3">
+		<% if user_signed_in? %>
+			<%= link_to t('add'), new_availability_path, remote: true, class: 'btn btn-default btn-lg' %>
+		<% else %>
+			<%= link_to t('add'), new_user_session_path, class: 'btn btn-default btn-lg' %>
+		<% end %>
+	</div>
 	<div class="col-md-6">
 		<% if @availabilities.any? %>
 			<% @availabilities.group_by(&:date).each do |date, date_availabilities| %>

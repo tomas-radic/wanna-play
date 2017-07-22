@@ -9,15 +9,20 @@
 		      </div>
 		      <div class="modal-body">
 						<div class="form-group">
-							<%= f.label :date, 'Dátum' %>
+							<%= f.label :date, t('activerecord.attributes.availability.date') %>
 							<%= f.date_field :date, class: 'form-control' %>
 					  </div>
 					  <div class="form-group">
-					  	<%= f.label :period, 'Čas' %>
+					  	<%= f.label :period, t('activerecord.attributes.availability.period') %>
 					  	<%= f.select :period, 
 					  		options_for_select(Availability.periods.map { |key, value| [t("activerecord.attributes.availability.periods.#{key}"), key] }, 
 					  		@availability.period), {}, class: 'form-control' 
 					  	%>
+					  </div>
+					  <div class="form-group">
+							<%= f.label :note, t('activerecord.attributes.availability.note') %>
+							<%= f.text_field :note, maxlength: Rails.configuration.max_availability_note_length, class: 'form-control' %>
+					  	<p class="help-block" id="chars-left">50</p>
 					  </div>
 		      </div>
 		      <div class="modal-footer">
@@ -28,3 +33,5 @@
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 <% end %>
+
+<%= render 'availabilities/modal_scripts' %>

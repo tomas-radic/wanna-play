@@ -23,6 +23,7 @@ class User < ApplicationRecord
 	end
 
 	def notify_destroy
+		MailHelper.user_destroyed(self)
 		# UserMailer.user_destroyed(self).deliver_now
 	end
 end

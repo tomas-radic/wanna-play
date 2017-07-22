@@ -2,6 +2,9 @@ sk:
   activerecord:
     attributes:
       availability:
+        date: Dátum
+        note: Poznámka
+        period: Čas
         periods:
           about_noon: okolo obeda
           afternoon: poobede
@@ -30,6 +33,7 @@ sk:
               too_short: je príliš krátke
             password_confirmation:
               confirmation: sa nezhoduje
+  add: Pridať
   availabilities:
     availabilities_list:
       no_scheduled_playing1: Nemáš tu žiadny hrací plán
@@ -39,8 +43,6 @@ sk:
       error: Záznam sa nepodarilo vytvoriť.
       record_already_exists: Takýto záznam už existuje.
       success: Prosím, ak si na tento deň neskôr dohodneš zápas, vráť sa sem a vymaž tento záznam, aby s tebou ostatní už nepočítali. Vďaka!
-    index:
-      add: Pridať
     update:
       error: Záznam sa nepodarilo upraviť.
       record_already_exists: Takýto záznam už existuje.
@@ -93,7 +95,7 @@ sk:
         password_confirmation: Potvrdenie hesla
         sign_up: Registrácia
       registration_fields:
-        name_suggestion_note_html: Prosím, použi tu rovnako napísané meno ako máš na stránke<br/><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a>.
+        name_suggestion_note_html: Prosím, použi tu rovnako napísané meno ako máš na stránke <span class="text-nowrap"><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a></span>.
         phone_number_suggestion_note: Číslo sa lepšie číta ak sú v ňom medzery.
       user:
         destroyed: ''

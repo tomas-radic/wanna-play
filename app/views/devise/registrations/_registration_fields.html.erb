@@ -6,11 +6,11 @@
 <div class="form-group">
   <%= form_object.label :name, t('activerecord.attributes.user.name') %>
   <%= form_object.text_field :name, class: 'form-control' %>
-  <small><i><%= t('.name_suggestion_note_html') %></i></small>
+  <p class="help-block"><%= t('.name_suggestion_note_html') %></p>
 </div>
 
 <div class="form-group">
   <%= form_object.label :phone_number, t('activerecord.attributes.user.phone_number') %>
   <%= form_object.text_field :phone_number, placeholder: '0901 234 567', class: 'form-control' %>
-  <small><i><%= t('.phone_number_suggestion_note') %></i></small>
+  <p class="help-block"><%= t('.phone_number_suggestion_note') %></p>
 </div>

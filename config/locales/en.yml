@@ -2,6 +2,9 @@ en:
   activerecord:
     attributes:
       availability:
+        date: Dátum
+        note: Poznámka
+        period: Čas
         periods:
           about_noon: about noon
           afternoon: afternoon
@@ -30,6 +33,7 @@ en:
               too_short: 'is too short'
             password_confirmation:
               confirmation: 'does not match'
+  add: Add
   availabilities:
     availabilities_list:
       no_scheduled_playing1: No plan to play here!
@@ -39,8 +43,6 @@ en:
       error: Record was NOT created.
       record_already_exists: Such record already exists.
       success: If you schedule a match for this day with someone, please be so kind, get back here and cancel this record so that you don't confuse other players. Thank you!
-    index:
-      add: Add
     update:
       error: Record was NOT updated.
       record_already_exists: Such record already exists.
@@ -93,7 +95,7 @@ en:
         password_confirmation: Password confirmation
         sign_up: Registration
       registration_fields:
-        name_suggestion_note_html: Please, type your name identically as you have it<br/>on <a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a> page.
+        name_suggestion_note_html: Please, type your name identically as you have it on <span class="text-nowrap"><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a></span> page.
         phone_number_suggestion_note: If you use spaces it's easier to read the number.
       user:
         destroyed: ''

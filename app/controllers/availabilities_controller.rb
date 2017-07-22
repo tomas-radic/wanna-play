@@ -45,7 +45,7 @@ class AvailabilitiesController < ApplicationController
   private
 
   def availability_params
-    params.require(:availability).permit(:date, :period)
+    params.require(:availability).permit(:date, :period, :note)
   end
 
   def set_error_message

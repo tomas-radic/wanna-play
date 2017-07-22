@@ -3,6 +3,7 @@ class Availability < ApplicationRecord
 	# Validations
 	validates :user_id, :date, :period, presence: true
 	validates :user_id, uniqueness: { scope: [:date, :period] }
+	validates :note, length: { maximum: Rails.configuration.max_availability_note_length }
 
 	# Relations
 	belongs_to :user	

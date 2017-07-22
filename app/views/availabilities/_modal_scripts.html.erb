@@ -1,0 +1,16 @@
+<script>
+	function setCharsLeft() {
+		var charsEntered = $('#availability_note').val().length;
+		$('#chars-left').text((<%= Rails.configuration.max_availability_note_length %> - charsEntered).toString());
+	}
+
+	$('#availability-modal').on('shown.bs.modal', function() {
+	  setCharsLeft();
+
+	  $('#availability_note').on('input', function() {
+			setCharsLeft();
+		});
+	});
+
+
+</script>
