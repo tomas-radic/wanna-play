@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@availabilities = Availability.current.where('date < ?', 1.month.from_now).includes(:user)
+  	@availabilities = Availability.current.unblocked
+  		.where('date < ?', 1.month.from_now).includes(:user)
   end
 end

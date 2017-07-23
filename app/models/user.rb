@@ -21,9 +21,9 @@ class User < ApplicationRecord
 	private
 
 	def strip_whitespaces
-		self.email.strip!
-		self.name.strip!
-		self.phone_number.strip!
+		self.email.strip! unless self.email.blank?
+		self.name.strip! unless self.name.blank?
+		self.phone_number.strip! unless self.phone_number.blank?
 	end
 
 	def notify_create

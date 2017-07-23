@@ -11,6 +11,8 @@ class AvailabilitiesController < ApplicationController
 
   def create
     @availability = current_user.availabilities.build(availability_params)
+    authorize @availability
+
     if @availability.save
       flash[:success] = t('.success')
     else
@@ -21,11 +23,12 @@ class AvailabilitiesController < ApplicationController
   end
 
   def edit
-    @availability = current_user.availabilities.current.find(params[:id])
+    @availability = current_user.availabilities.current.unblocked.find(params[:id])
   end
 
   def update
-    @availability = current_user.availabilities.current.find(params[:id])
+    @availability = current_user.availabilities.current.unblocked.find(params[:id])
+    authorize @availability
 
     if @availability.update(availability_params)
       flash[:success] = t('.success')
@@ -37,7 +40,9 @@ class AvailabilitiesController < ApplicationController
   end
 
   def destroy
-    current_user.availabilities.current.find(params[:id]).destroy
+    availability = current_user.availabilities.current.find(params[:id])
+    authorize availability
+    availability.destroy
     @availabilities = current_user.availabilities.current
   end
 

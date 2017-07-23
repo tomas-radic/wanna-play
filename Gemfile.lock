@@ -104,6 +104,8 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     puma (3.9.1)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -205,6 +207,7 @@ DEPENDENCIES
   pg
   pry
   puma (~> 3.0)
+  pundit
   rails (~> 5.0.2)
   sass-rails (~> 5.0)
   sendgrid-ruby

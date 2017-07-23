@@ -12,13 +12,15 @@ class Availability < ApplicationRecord
 
 	# Scopes
 	scope :current, -> { where(occupied: false).where('date >= ?', Date.today).order(:date, :period) }
+	scope :unblocked, -> { joins(:user).where('users.blocked is false') }
 
+	# Callbacks
 	before_validation :strip_whitespaces
 
 
 	private
 
 	def strip_whitespaces
-		self.note.strip!
+		self.note.strip! unless self.note.blank?
 	end
 end

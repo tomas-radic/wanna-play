@@ -14,10 +14,12 @@
 								<small><i><%= note_for(a) %></i></small>
 							</td>
 							<td>
-								<%= link_to edit_availability_path(a), remote: true do %>
-									<span class="glyphicon glyphicon-pencil"></span>
+								<% if policy(a).update? %>
+									<%= link_to edit_availability_path(a), remote: true do %>
+										<span class="glyphicon glyphicon-pencil"></span>
+									<% end %>
+									|
 								<% end %>
-								|
 								<%= link_to availability_path(a), method: :delete, remote: true do %>
 									<span class="glyphicon glyphicon-remove-circle"></span>
 								<% end %>
@@ -31,9 +33,15 @@
 <% else %>
 	<div class="panel panel-default">
 		<div class="panel-body vert-spaced">
-			<%= t('.no_scheduled_playing1') %>
-			<b><%= link_to t('.no_scheduled_playing_link_text'), new_availability_path, remote: true, class: 'underlined' %></b>
-			<%= t('.no_scheduled_playing2') %>
+			<% if policy(Availability).create? %>
+				<p>
+					<%= t('.no_scheduled_playing1') %>
+					<b><%= link_to t('.no_scheduled_playing_link_text'), new_availability_path, remote: true, class: 'underlined' %></b>
+					<%= t('.no_scheduled_playing2') %>
+				</p>
+			<% else %>
+				<p class="center-text"><%= t('user_blocked_info') %></p>
+			<% end %>
 		</div>
 	</div>
 <% end %>
