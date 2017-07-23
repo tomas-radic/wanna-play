@@ -118,7 +118,7 @@ sk:
   home:
     index:
       how_this_helps: Ako mi toto pomôže?
-      how_this_helps_text: Na tejto stránke nájdeš zoznam možných súperov, ktorí zverejnili že majú záujem si v najbližšej dobe zahrať. Takže nemusíš volať rôznym ľuďom, stačí si vybrať z tých, ktorých tu vidíš! Aj ty môžeš zverejniť svoj záujem hrať. Ostatní to uvidia tu a zavolajú ti sami!
+      how_this_helps_text_html: Na tejto stránke nájdeš zoznam možných súperov, ktorí zverejnili že majú záujem si v najbližšej dobe zahrať zápas v lige <span class="text-nowrap"><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a></span>. Takže nemusíš volať rôznym ľuďom, stačí si vybrať z tých, ktorých tu vidíš! Aj ty môžeš zverejniť svoj záujem hrať. Ostatní to uvidia tu a zavolajú ti sami!
       why_is_page_slow: Prečo stránka nabieha pomaly?
       why_is_page_slow_text: Keďže prevádzka tejto stránky nemá cieľ zarobiť peniaze, je snaha udržovať jej prevádzku na minimálnych nákladoch. Preto keď sa nejaký čas nepoužíva, je hostovacím serverom uvedená do mikrospánku, ale vždy ju môžeš prebudiť, poteší sa :-)
     no_one_to_play_link:
