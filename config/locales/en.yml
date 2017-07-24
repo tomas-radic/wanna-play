@@ -119,6 +119,7 @@ en:
     index:
       how_this_helps: How can this help me?
       how_this_helps_text_html: This page will show you list of potential sparring partners or opponents, those who published their interest to play <span class="text-nowrap"><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a></span> league match in upcoming days. No need to call those having another plans, just pick one here! And you can also publish your interest to play too. They will see you here and call you by them selves!
+      upcoming_displayed_info: Only upcoming records are displayed here. If you don't see your later plan here check back in few days.
       why_is_page_slow: Why is the first page load slow?
       why_is_page_slow_text: This page does not earn any money in any way. So it is needed to keep the costs as low as possible and the hosting service makes it sleep after some time when not used. But you can wake it up anytime, it gets happy :-)
     no_one_to_play_link:
