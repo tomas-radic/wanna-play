@@ -39,6 +39,8 @@ sk:
       no_scheduled_playing1: Nemáš tu žiadny hrací plán
       no_scheduled_playing2: si ho a zavolaj ostatných hrať!
       no_scheduled_playing_link_text: vytvor
+    availability_modal:
+      autocancel_text: Prajem si automaticky zrušiť túto požiadavku v prípade, ak sa mi na tento deň objaví naplánovaný zápas na www.kurty-topolcany.sk (iba ak sa meno zhoduje)
     create:
       error: Záznam sa nepodarilo vytvoriť.
       record_already_exists: Takýto záznam už existuje.

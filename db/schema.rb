@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723155239) do
+ActiveRecord::Schema.define(version: 20170730184400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "availabilities", force: :cascade do |t|
-    t.integer  "user_id",                    null: false
-    t.date     "date",                       null: false
-    t.integer  "period",                     null: false
-    t.boolean  "occupied",   default: false, null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.integer  "user_id",                        null: false
+    t.date     "date",                           null: false
+    t.integer  "period",                         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "note"
-    t.index ["user_id", "date", "period"], name: "index_availabilities_on_user_id_and_date_and_period", unique: true, using: :btree
+    t.datetime "occupied_since"
+    t.boolean  "autocancel",     default: false, null: false
   end
 
   create_table "users", force: :cascade do |t|

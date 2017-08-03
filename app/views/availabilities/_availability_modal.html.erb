@@ -24,6 +24,12 @@
 							<%= f.text_field :note, maxlength: Rails.configuration.max_availability_note_length, class: 'form-control' %>
 					  	<p class="help-block" id="chars-left">50</p>
 					  </div>
+					  <div class="checkbox">
+	            <%= f.label :autocancel do %>
+	              <%= f.check_box :autocancel %>
+	              <%= t('.autocancel_text') %>
+	            <% end %>
+	          </div>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="submit" class="btn btn-default">Submit</button>

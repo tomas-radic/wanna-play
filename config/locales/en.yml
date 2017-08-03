@@ -39,6 +39,8 @@ en:
       no_scheduled_playing1: No plan to play here!
       no_scheduled_playing2: and get the others to play with you!
       no_scheduled_playing_link_text: Create some
+    availability_modal:
+      autocancel_text: I wish this record to be cancelled automatically in case there is a planned match for me at www.kurty-topolcany.sk on this day (works only if names match)
     create:
       error: Record was NOT created.
       record_already_exists: Such record already exists.

@@ -6,7 +6,11 @@ class AvailabilitiesController < ApplicationController
   end
 
   def new
-    @availability = current_user.availabilities.build(date: Date.today, period: :all_day)
+    @availability = current_user.availabilities.build(
+      date: Date.today, 
+      period: :all_day,
+      autocancel: true
+    )
   end
 
   def create
@@ -50,7 +54,7 @@ class AvailabilitiesController < ApplicationController
   private
 
   def availability_params
-    params.require(:availability).permit(:date, :period, :note)
+    params.require(:availability).permit(:date, :period, :note, :autocancel)
   end
 
   def set_error_message
