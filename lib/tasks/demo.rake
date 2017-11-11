@@ -27,7 +27,7 @@ namespace :demo do
       end
     end
 
-    demo_users.reload
+    demo_users = User.where(blocked: false).demos
     Availability.where(user_id: demo_users.ids).destroy_all
 
     puts "\nCreating availabilities for #{demo_users.count} demo users..."
