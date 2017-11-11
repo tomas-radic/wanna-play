@@ -7,6 +7,7 @@
 		<% end %>
 	</div>
 	<div class="col-md-6">
+		<%= render 'demo_mode_info' if Rails.configuration.demo_mode %>
 		<% if @availabilities.any? %>
 			<% @availabilities.group_by(&:date).each do |date, date_availabilities| %>
 				<div class="panel panel-default">

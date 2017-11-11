@@ -118,6 +118,10 @@ en:
         log_in: Log In
         sign_up: Registration
   home:
+    demo_mode_info:
+      caption: It's cold out there!
+      text: The outdoor tennis season is now over and this competition is waiting for the next great hot summer. During that time this page would be feeling lonely. That's why it runs a DEMO MODE to display some fake players activities and so feels better while we don't use it :-)
+      footer_text: Thanks for using these pages and make sure to be back here as the next outdoor tennis season comes!
     index:
       how_this_helps: How can this help me?
       how_this_helps_text_html: This page will show you list of potential sparring partners or opponents, those who published their interest to play <span class="text-nowrap"><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a></span> league match in upcoming days. No need to call those having another plans, just pick one here! And you can also publish your interest to play too. They will see you here and call you by them selves!

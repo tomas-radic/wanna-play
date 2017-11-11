@@ -15,5 +15,8 @@ module WannaPlay
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
 		config.i18n.default_locale = :sk
 		config.max_availability_note_length = 60
+    config.demo_mode = true   # demo mode used in winter, availabilities are generated 
+                              # for demo users, causing the webpage not to be empty 
+                              # while we don't play tennis.
   end
 end

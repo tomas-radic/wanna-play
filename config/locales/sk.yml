@@ -118,6 +118,10 @@ sk:
         log_in: Prihlásenie
         sign_up: Registrácia
   home:
+    demo_mode_info:
+      caption: Už je vonku zima!
+      text: Outdoorová tenisová sezóna nám skončila a už sa nedočkavo tešíme na ďalšie leto! Počas zimy sa táto stránka nevyužíva a cítila by sa opustená, čo nechceme :) Preto je zatiaľ spustená v DEMO REŽIME, aby zobrazovala aspoň aktivity vymyslených hráčov.
+      footer_text: Vďaka za používanie týchto stránok pre plánovanie svojich zápasov, určite sa sem vráť hneď ako začneme vonku znova hrať!
     index:
       how_this_helps: Ako mi toto pomôže?
       how_this_helps_text_html: Na tejto stránke nájdeš zoznam možných súperov, ktorí zverejnili že majú záujem si v najbližšej dobe zahrať zápas v lige <span class="text-nowrap"><a href="http://www.kurty-topolcany.sk" target="_blank">www.kurty-topolcany.sk</a></span>. Takže nemusíš volať rôznym ľuďom, stačí si vybrať z tých, ktorých tu vidíš! Aj ty môžeš zverejniť svoj záujem hrať. Ostatní to uvidia tu a zavolajú ti sami!
