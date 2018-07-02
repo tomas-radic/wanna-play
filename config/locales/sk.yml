@@ -141,6 +141,12 @@ sk:
       my_plan: Môj plán
       profile: Profil
       registration: Registrácia
+  occupations:
+    create_multiple:
+      error: Záznam sa nepodarilo vytvoriť.
+    index:
+      release: Uvolniť
+      submit: Potvrdiť
   shared:
     footer:
       author: Autor

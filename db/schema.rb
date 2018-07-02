@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170827110154) do
+ActiveRecord::Schema.define(version: 20180624160909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,40 @@ ActiveRecord::Schema.define(version: 20170827110154) do
     t.string   "note"
     t.datetime "occupied_since"
     t.boolean  "autocancel",     default: false, null: false
+  end
+
+  create_table "court_to_time_slots", force: :cascade do |t|
+    t.integer  "court_id",                    null: false
+    t.integer  "time_slot_id",                null: false
+    t.boolean  "enabled",      default: true, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "courts", force: :cascade do |t|
+    t.string   "name",                      null: false
+    t.boolean  "enabled",    default: true, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "occupations", force: :cascade do |t|
+    t.integer  "user_id",      null: false
+    t.date     "date",         null: false
+    t.integer  "court_id",     null: false
+    t.integer  "time_slot_id", null: false
+    t.string   "note"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["court_id", "date", "time_slot_id"], name: "index_occupations_on_court_id_and_date_and_time_slot_id", unique: true, using: :btree
+  end
+
+  create_table "time_slots", force: :cascade do |t|
+    t.integer  "order_key",        null: false
+    t.string   "label_begin_time", null: false
+    t.string   "label_end_time",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "users", force: :cascade do |t|

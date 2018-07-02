@@ -1,20 +1,13 @@
-class AvailabilityPolicy
-  attr_reader :user, :availability
-
-  def initialize(user, availability)
-    @user = user
-    @availability = availability
-  end
-
+class AvailabilityPolicy < ApplicationPolicy
   def create?
   	!user.blocked?
   end
 
   def update?
-    !user.blocked? && availability.user == user
+    !user.blocked? && record.user == user
   end
 
   def destroy?
-  	availability.user == user
+  	record.user == user
   end
 end

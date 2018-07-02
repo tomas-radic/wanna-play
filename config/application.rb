@@ -13,8 +13,8 @@ module WannaPlay
     # -- all .rb files in that directory are automatically loaded.
 
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
-		config.i18n.default_locale = :sk
-		config.max_availability_note_length = 60
+	config.i18n.default_locale = :sk
+	config.max_availability_note_length = 60
     
     # demo mode used in winter, availabilities are generated 
     # for demo users, causing the webpage not to be empty 

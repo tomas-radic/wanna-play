@@ -41,11 +41,17 @@ gem 'faker' # temporarily for all environments
 gem 'sendgrid-ruby'
 gem 'pundit'
 gem 'nokogiri'
+gem 'rails-patterns'
+gem 'attr_extras'
+gem 'select2-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # gem 'faker' # temporarily for all environments
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'pry'
 end
 
 group :development do

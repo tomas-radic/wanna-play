@@ -10,5 +10,9 @@ Rails.application.routes.draw do
 	  get 'users/password_change', to: 'users#password_change', as: 'password_change'
 	  patch 'users/password_change_confirm', to: 'users#password_change_confirm', as: 'password_change_confirm'
 	  resources :availabilities, except: [:show]
+
+	  resources :occupations, only: [:index, :destroy] do
+	  	post :create_multiple, on: :collection
+	  end
 	end
 end

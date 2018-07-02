@@ -1,0 +1,36 @@
+<script>
+  var ready = function() {
+    $('#user_id').select2();
+    activateTab('<%= @active_tab %>');
+
+    // Events
+    $('#courts-tabs a').click(function (e) {
+      tabChanged($(this).attr('href'));
+    });
+  };
+
+  
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+
+  function clearAndSubmit(form) {
+    clearActiveCheckboxes();
+    form.submit();
+  }
+
+  function clearActiveCheckboxes() {
+    $('.time-slot-checkbox:enabled').prop('checked', false);
+  }
+
+  function activateTab(name) {
+    if (name.length == 0) {
+      return;
+    }
+
+    $('#courts-tabs a[href="' + name + '"]').tab('show');
+  }
+
+  function tabChanged(name) {
+    $('#active_tab').val(name);    
+  }
+</script>

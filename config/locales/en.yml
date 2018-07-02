@@ -141,6 +141,12 @@ en:
       profile: Profile
       registration: Registration
       slovak: Slovensky
+  occupations:
+    create_multiple:
+      error: Record was NOT created.
+    index:
+      release: Release
+      submit: Submit
   shared:
     footer:
       author: Author

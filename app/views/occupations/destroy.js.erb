@@ -1,0 +1,1 @@
+$('<%= "#{@element_id}" %>').html("<%= escape_javascript(render(partial: 'time_slot_row', locals: { court: @court, date: @date, time_slot: @time_slot, occupied_time_slots: @occupied_time_slots })) %>");

@@ -1,0 +1,54 @@
+<%= form_tag create_multiple_occupations_path, method: :post, class: 'form-inline' do %>
+  <div class="row">
+    <div class="col-xs-12 col-md-2">
+      <p><%= date_field_tag(:date, @date, onchange: 'clearAndSubmit(this.form);') %></p>
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-body">
+      
+          <!-- Nav tabs -->
+          <%= hidden_field_tag :active_tab %>
+          <ul class="nav nav-tabs" role="tablist" id="courts-tabs">
+            <% @courts.each_with_index do |court, i| %>
+              <li role="presentation" class='<%= "#{tab_class(i)}" %>'>
+                <a href='<%= "##{tab_href(court)}" %>' aria-controls='<%= "#{tab_href(court)}" %>' role="tab" data-toggle="tab">
+                  <%= court.name %>
+                </a>
+              </li>
+            <% end %>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <% @courts.each_with_index do |court, i| %>
+              <div role="tabpanel" class='<%= "tab-pane #{tab_class(i)}" %>' id='<%= "#{tab_href(court)}" %>'>          
+                <table class="table">
+                  <tbody>
+                    <% court.time_slots.each do |time_slot| %>
+                      <tr class='<%= "time_slot_row_#{court.id}_#{time_slot.id}" %>'>
+                        <%= render partial: 'time_slot_row', 
+                            locals: { court: court, date: @date, time_slot: time_slot, 
+                            occupied_time_slots: @occupied_time_slots } %>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-2">
+      <p>
+        <%= select_tag :user_id, 
+            options_from_collection_for_select(UsersQuery.call.select { |u| !u.has_role?(:demo) }, 
+            :id, :name, @user_id) %>
+      </p>
+      <p><%= submit_tag t('.submit'), class: 'btn btn-default btn-lg' %></p>
+    </div>
+  </div>
+<% end %>
+
+<%= render 'scripts' %>

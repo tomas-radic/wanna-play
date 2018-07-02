@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   # Roles
-  enum roles: [:admin, :demo]
+  enum roles: [:admin, :operator, :demo]
 
   # after_create  :notify_create,   if: Proc.new { Rails.env.eql?('development') }
   # after_destroy :notify_destroy,  if: Proc.new { Rails.env.eql?('development') }
@@ -16,6 +16,7 @@ class User < ApplicationRecord
 
   # Relations
   has_many :availabilities, dependent: :destroy
+  has_many :occupations, dependent: :destroy
 
   # Callbacks
   before_validation :strip_whitespaces
