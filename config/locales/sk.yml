@@ -134,6 +134,7 @@ sk:
       no_one_to_play2: kedy chceš ty hrať!
   layouts:
     main_menu:
+      courts: Kurty
       english: English
       home: Domov
       login: Prihlásenie

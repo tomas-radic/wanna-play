@@ -134,6 +134,7 @@ en:
       no_one_to_play2: what time do you want to play!
   layouts:
     main_menu:
+      courts: Courts
       home: Home
       login: Log In
       logout: Log Out

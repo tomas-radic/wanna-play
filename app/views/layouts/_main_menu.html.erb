@@ -17,6 +17,9 @@
       	<%= content_tag :li, class: (current_page?(availabilities_path) ? 'active' : '') do %>
       		<%= link_to t('.my_plan'), availabilities_path %>
       	<% end %>
+        <%= content_tag :li, class: (current_page?(occupations_path) ? 'active' : '') do %>
+          <%= link_to t('.courts'), occupations_path %>
+        <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
